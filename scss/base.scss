@@ -1,0 +1,98 @@
+.storefront-align-wide.page-template-template-fullwidth-php .hentry .entry-content .alignwide,
+.storefront-align-wide.storefront-full-width-content .hentry .entry-content .alignwide {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: $playfair-font;
+    font-weight: 700; // Using the bolder variant
+}
+
+.wpc-term-item-content-wrapper {
+    position: relative;
+    padding-left: 35px;
+
+    input[type="checkbox"] {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0;
+
+        &:checked+label:before {
+            background-color: $primary; // Change to your desired color
+            border-color: $primary; // Change to match background color
+        }
+
+        &:checked+label:after {
+            display: block;
+        }
+    }
+
+    label {
+        cursor: pointer;
+        user-select: none;
+
+        &:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 20px;
+            height: 20px;
+            border: 2px solid $primary; // Change border color as needed
+            border-radius: 4px; // Optional for rounded corners
+            background-color: white; // Change background color as needed
+        }
+
+        &:after {
+            content: '';
+            position: absolute;
+            left: 8px;
+            top: 43%;
+            transform: translateY(-50%) rotate(45deg);
+            width: 6px;
+            height: 12px;
+            border: solid white;
+            border-width: 0 3px 3px 0;
+            display: none;
+        }
+    }
+}
+
+.button.add_to_cart_button,
+.button.single_add_to_cart_button {
+    @include button-styles;
+}
+
+.woocommerce-ordering {
+    .orderby {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        background-color: transparent;
+        border: 1px solid $primary; // Black border
+        border-radius: 5px; // Rounded corners
+        padding: 10px 30px 10px 10px;
+        font-size: 16px;
+        color: $primary; // Black text color
+        cursor: pointer;
+
+        background-image: url('data:image/svg+xml;utf8,<svg fill="%23083322" height="60" viewBox="0 0 24 24" width="30" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>');
+        // Black arrow (fill color set to #083322)
+        background-repeat: no-repeat;
+        background-position: right 0px center;
+
+        &:focus {
+            outline: none;
+            border-color: $primary; // You can customize the focus border color
+        }
+    }
+}
