@@ -46,15 +46,3 @@ function enqueue_fontawesome_styles()
 }
 
 add_action('wp_enqueue_scripts', 'enqueue_fontawesome_styles');
-
-// Remove sidebar on product page
-//function njengah_remove_sidebar( $is_active_sidebar, $index ) {
-    //if( $index !== "sidebar-1" ) {
-        //return $is_active_sidebar;
-    //}
-    //if( ! is_product() ) {
-        //return $is_active_sidebar;
-    //}
-    //return false;
-//}
-//add_filter( 'is_active_sidebar', 'njengah_remove_sidebar', 10, 2 );
